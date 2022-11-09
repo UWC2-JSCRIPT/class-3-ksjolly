@@ -25,7 +25,8 @@ const getTotalPoints = (results) => {
   o = {};
   ar.forEach(w => w.split('').forEach(e => o[e] = (o[e] || 0)+1));
   const sum = o['w'] * 3 + o['d'] * 1;
-  console.log('Sum is: ', sum);
+  // console.log('Sum is: ', sum);
+  return sum;
 
 }
 
@@ -41,7 +42,8 @@ console.log(getTotalPoints('wwdl')); // should equal 7
 const orderTeams = function() {
   const args = Array.from(arguments);
   args.forEach(function(input) {
-    console.log(`Team Name ${input.name} Results: ${input.results}`);
+    const points = getTotalPoints(input.results);
+    console.log(`${input.name} : ${points}`);
   });
 }
 

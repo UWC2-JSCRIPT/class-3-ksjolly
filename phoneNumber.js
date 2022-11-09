@@ -6,6 +6,11 @@
 // Returns true if valid, false if not valid
 
 
+// This seems to work on the onlne regex tester, but I'm not sure why it isn't working here!
+const testPhoneNumber = (num) => {
+    const phoneRegex = new RegExp('^\(\d{3}\)[-\s]\d{3}[-\s]\d{4}','g');
+    return phoneRegex.test(num);
+}
 
 // Explanation of RegExp
 // ^      start of line
@@ -23,6 +28,8 @@ console.log(testPhoneNumber('(206) 333-4444')); // should return true
 console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a digit
 
 
+
+
 // 1. Create a function parsePhoneNumber that takes in a phoneNumber string 
 // in one of the above formats.  For this, you can *assume the phone number
 // passed in is correct*.  This should use a regular expression
@@ -30,6 +37,10 @@ console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a
 // the phone number.
 // Returns an object in the format {areaCode, phoneNumber}
 
+const parsePhoneNumber = (num) => {
+    
+
+}
 
 
 // Check parsePhoneNumber
